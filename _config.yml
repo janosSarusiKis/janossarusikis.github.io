@@ -19,17 +19,35 @@
 # in the templates via {{ site.myvariable }}.
 
 title: The Croissant Coder blog
-email: your-email@example.com
+email: janos.sarusikis@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Personal blog about croissants, breads, coding, baking, cooking and stuff.
+  Personal blog about baking dough and writing code. 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  janosSarusiKis
+
+footer:
+  links:
+    - label: "X - Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://x.com/croissantcoder"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/janosSarusiKis"
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      show_date: true
+      read_time: true
 
 # Build settings
 
 remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "dark" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
 plugins:
   - jekyll-feed
   - jekyll-include-cache
